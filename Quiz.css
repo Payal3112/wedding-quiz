@@ -1,0 +1,115 @@
+/* Set background using image from /public folder */
+body {
+  margin: 0;
+  padding: 0;
+  background-image:url('/images.jpg') ;
+  background-size: cover;
+  font-family: 'Georgia', serif;
+  color: #3c1e1e;
+  overflow-x: hidden;
+}
+
+/* Dark overlay to enhance readability */
+.dark-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 8, 8, 0.6);
+  z-index: -1;
+}
+
+
+.quiz-container {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 45px 35px;
+  background-image: url('/download (1).jpg');  /* ✅ Public path */
+  background-repeat: no-repeat;            /* ✅ Only show once */
+  background-size: cover;                  /* ✅ Stretch to fit */
+  background-position: center;             /* ✅ Centered */
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 4px double #b66c72;
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+  color: white;                            /* Optional: improve readability */
+}
+
+/* Title */
+.quiz-container h1 {
+  font-size: 2.5rem;
+  color: #efe6e7;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px #f5d7da;
+}
+
+/* Question text */
+.question-section h2 {
+  font-size: 1.4rem;
+  color: #4e1f1f;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+/* Tag below the question */
+.question-tag {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #9e3d3d;
+  margin-bottom: 20px;
+  background-color: #fce8e8;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 16px;
+  box-shadow: 0 0 6px rgba(158, 61, 61, 0.2);
+}
+
+/* Option buttons */
+.option-btn {
+  display: block;
+  width: 90%;
+  margin: 14px auto;
+  padding: 14px 20px;
+  font-size: 1rem;
+  background-color: #fffafa;
+  border: 2px solid #e0a7aa;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #4a2c2a;
+  position: relative;
+}
+
+/* Hover effect for options */
+.option-btn:hover {
+  background-color: #f8d7da;
+  color: #6b1c1c;
+  transform: scale(1.03);
+  box-shadow: 0 0 12px #f3c5c8;
+}
+
+/* Final result box */
+.result {
+  font-size: 1.3em;
+  color: #2e7d32;
+  font-weight: 600;
+  animation: fadeIn 1s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(46, 125, 50, 0.2);
+}
+
+.result p {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #388e3c;
+}
+
+/* Smooth fade effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
